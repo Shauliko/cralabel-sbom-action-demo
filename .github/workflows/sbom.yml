@@ -1,0 +1,21 @@
+name: CRA Label SBOM
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  sbom:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: cra
+        uses: Shauliko/cralabel-sbom-action@main
+        with:
+          artifact-name: cra-sbom-${{ matrix.os }}
+      - name: Show the Action's outputs
+        shell: bash
+        run: echo "files=${{ steps.cra.outputs.files }} components=${{ steps.cra.outputs.components }} signed=${{ steps.cra.outputs.signed }}"

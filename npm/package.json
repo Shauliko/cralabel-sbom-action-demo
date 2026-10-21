@@ -1,0 +1,7 @@
+{
+  "name": "demo-router-ui",
+  "version": "2.4.1",
+  "private": true,
+  "dependencies": { "express": "^4.21.2", "ws": "^8.18.0" },
+  "devDependencies": { "eslint": "^9.0.0" }
+}

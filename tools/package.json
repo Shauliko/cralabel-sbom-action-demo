@@ -1,0 +1,7 @@
+{
+  "name": "demo-build-tools",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": { "commander": "^12.1.0", "semver": "~7.6.0" },
+  "devDependencies": { "prettier": "^3.3.0" }
+}
