@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - id: cra
-        uses: Shauliko/cralabel-sbom-action@main
+        uses: Shauliko/cralabel-sbom-action@v1
         with:
           artifact-name: cra-sbom-${{ matrix.os }}
       - name: Show the Action's outputs
